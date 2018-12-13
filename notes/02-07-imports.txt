@@ -1,0 +1,25 @@
+# Module Imports and Aliases 
+
+Let's first do a `require` in Elixir. 
+
+```elixir 
+require Integer     # Equiv. of import Integer of Python 
+
+Integer.is_odd(3) 
+is_odd(3)   # CompileError 
+```
+
+```elixir 
+import Integer      # Equiv. of from Integer import * 
+is_odd(3) 
+```
+
+There are a couple of other things but we will come to them when they are necessary. 
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

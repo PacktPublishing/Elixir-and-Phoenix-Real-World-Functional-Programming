@@ -1,0 +1,45 @@
+# Structures 
+
+Structures are going to be extensively used in Phoenix. They're very similar to maps. Let's see an example. 
+
+```elixir 
+# filename: 08structs.exs
+defmodule User do
+    defstruct name: "John", age: 29
+end
+
+defmodule Test do
+    require User
+
+    def main do
+        john = %User{}
+        IO.inspect john
+
+        IO.puts "Another one ... "
+        jane = %User{name: "jane"}
+        IO.inspect jane
+
+        IO.puts "Aging jane ... "
+        jane = %{jane | age: 31}
+        IO.inspect jane
+
+        IO.puts "Jane's age is #{jane.age}"
+
+        IO.puts "Occupation ... "
+        jane = %{jane | occ: 'Lawyer'}
+        IO.inspect jane
+    end
+end
+
+Test.main
+```
+
+So, just maps without the possibility of adding new fields (thus avoiding typos). 
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

@@ -1,0 +1,33 @@
+# File Handling 
+
+Basic file handling is easy. Let's see. 
+
+```elixir 
+# iex 
+
+{:ok, file} = File.open "hello", [:write]
+IO.binwrite file, "world"
+File.close file    # Notice that we don't have file.close 
+
+# Let's read it back 
+
+{ok, contents} = File.read "hello"
+
+# Now delete the file and then try again
+{ok, contents} = File.read "hello"
+```
+
+And the usual Path.join works here as well. 
+
+```elixir 
+Path.join("foo", "bar")
+Path.expand("~/hello")
+```
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

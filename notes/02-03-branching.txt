@@ -1,0 +1,51 @@
+## Branching with Cond, If and Unless 
+
+The basics can be covered with an if. 
+
+```elixir 
+age = 18
+if age >= 18 do 
+    "Can drive!" 
+else 
+    "Nope" 
+end 
+
+# Can rewrite this as: 
+
+if age >= 18,   do: "Can drive!",   else: "Nope." 
+# Notice the commas 
+```
+
+We also have cond. 
+
+```elixir 
+cond do
+    2 + 2 == 5 ->
+        "This will not be true"
+    2 * 2 == 3 ->
+        "Nor this"
+    1 + 1 == 2 ->
+        "But this will"
+end
+```
+
+## Unless 
+
+In elixir, there is a shortcut for `if not` -- It's called `unless`. 
+
+```elixir 
+age = 16
+unless age > 18 do
+    "You can't drive, man!"
+end
+
+# Also note the `nil` when we change age to 20
+```
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

@@ -1,0 +1,38 @@
+# Quick Case Sutdy: Distributed Calls in Elixir 
+
+Start an Elixir shell: 
+
+```bash  
+iex --name alice 
+```
+
+```elixir 
+defmodule Hello do
+  def world do
+    IO.puts "Hello World"
+  end
+end
+```
+
+Start another command prompt or shell. 
+
+```bash  
+iex --name bob
+```
+
+```elixir
+Hello.world()    # leads to error, of course 
+
+Node.spawn(:"alice@zenbox.local", fn -> Hello.world() end)
+
+# Make sure you change the identifier according to the one shown in your first shell  
+```
+
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

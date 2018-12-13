@@ -1,0 +1,36 @@
+# Concurrency in Elixir 
+
+Elixir is famous for its concurrency. Fortunately, it's very easy to work with threads in Elixir and the VM takes care of everything for us itself. 
+
+Let's take a basic example for this. 
+
+```elixir 
+# File: 09threads.ex
+
+defmodule Server do 
+    def listen do
+        receive do 
+            {:ok, :ping} -> IO.puts "Pong"
+            # {:ok, :ding} -> IO.puts "Dong"
+        end 
+
+        listen    # go back to listening 
+    end 
+end 
+```
+
+Let's use this in iex 
+
+```elixir
+# load in iex using c("09threads.ex")
+pid = spawn(Server, :listen, [])
+send pid, {:ok, :ping}
+send pid, {:ok, :ding}   # nothing
+```
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

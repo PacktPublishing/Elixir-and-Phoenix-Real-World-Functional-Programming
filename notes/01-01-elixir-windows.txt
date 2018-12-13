@@ -1,0 +1,34 @@
+# Set Up Elixir on Windows   
+
+Download the installer from https://repo.hex.pm/elixir-websetup.exe
+
+Install it using the wizard. All the default should work fine. 
+
+It might ask you to install some .Net redistributables. Just go ahead and click ok on that as well. 
+
+## Running Elixir 
+
+Now that we have elixir set up, let's make sure it's working correctly. 
+
+Open up the command prompt. 
+
+```bash 
+# Getting started with Elixir. 
+# Just type: 
+#      iex 
+# to enter the interactive shell 
+```
+
+And here's the hello world for it! 
+
+```elixir 
+IO.puts "Hello World!" 
+``` 
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

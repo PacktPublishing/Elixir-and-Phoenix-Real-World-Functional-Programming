@@ -1,0 +1,38 @@
+# Set Up Elixir on Ubuntu  
+
+Let's first set up Elixir. 
+
+```bash
+# Set up the repository  
+
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+
+sudo apt update 
+sudo apt install esl-erlang -y 
+sudo apt install elixir -y
+```
+
+## Running Elixir 
+
+Now that we have elixir set up, let's make sure it's working correctly. 
+
+```bash 
+# Getting started with Elixir. 
+# Just type: 
+#      iex 
+# to enter the interactive shell 
+```
+
+And here's the hello world for it! 
+
+```elixir 
+IO.puts "Hello World!" 
+``` 
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`

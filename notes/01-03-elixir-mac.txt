@@ -1,0 +1,39 @@
+# Set Up Elixir on MacOS 
+
+
+If you don't already have homebrew (https://brew.sh), install that: 
+
+```bash 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Then, go ahead and install elixir using that: 
+
+```bash 
+brew install elixir
+```
+
+## Running Elixir 
+
+Now that we have elixir set up, let's make sure it's working correctly. 
+
+```bash 
+# Getting started with Elixir. 
+# Just type: 
+#      iex 
+# to enter the interactive shell 
+```
+
+And here's the hello world for it! 
+
+```elixir 
+IO.puts "Hello World!" 
+``` 
+
+
+---
+"Elixir and Phoenix: Real World Functional Programming" 
+
+Video Course by Dr. Nauman 
+
+`http://recluze.net/learn`
